@@ -5,4 +5,8 @@ d = { 'settings': { 'branch': 'master',
                 'doc_host': 'https://csi-hamburg.github.io',
                 'git_url': 'https://github.com/csi-hamburg/python_functions',
                 'lib_path': 'python_functions'},
-  'syms': {'python_functions.core': {'python_functions.core.foo': ('core.html#foo', 'python_functions/core.py')}}}
+  'syms': { 'python_functions.core': {'python_functions.core.foo': ('core.html#foo', 'python_functions/core.py')},
+            'python_functions.descriptive_statistics': { 'python_functions.descriptive_statistics.finalize_stats_2groups': ( 'descriptive_statistics.html#finalize_stats_2groups',
+                                                                                                                             'python_functions/descriptive_statistics.py'),
+                                                         'python_functions.descriptive_statistics.stats_2groups': ( 'descriptive_statistics.html#stats_2groups',
+                                                                                                                    'python_functions/descriptive_statistics.py')}}}
