@@ -8,9 +8,9 @@ def plot_surface(
     surface:str, # Surface to plot on (default: fslr32k). Valid choices are “fslr32k”, “fsaverage”, “fsaverage3”, “fsaverage4”, “fsaverage5”, “fsaverage6”, “civet41k”, “civet164k”.
     values, # numpy array of values to plot (has to match the number of vertices in the surface)
     label_text:str, # text to label the plot
-    color_range:str, # color range to use
+    color_range:tuple=None, # color range to use
     cmap="Blues" # color map to use
-    ): # Plot 
+    )->object: # Plot 
     "Plots metric values on surface"
     
     # Plot cortical surfaces with values as the data, label_text as
@@ -24,6 +24,11 @@ def plot_surface(
 
     
     from brainspace.plotting import plot_hemispheres
+    import numpy as np
+
+    if not color_range:
+        color_range = (np.nanmin(values), np.nanmax(values))
+
     return plot_hemispheres(
         pial_left,
         pial_right,
