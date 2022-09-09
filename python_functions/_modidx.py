@@ -9,4 +9,6 @@ d = { 'settings': { 'branch': 'master',
             'python_functions.descriptive_statistics': { 'python_functions.descriptive_statistics.finalize_stats_2groups': ( 'descriptive_statistics.html#finalize_stats_2groups',
                                                                                                                              'python_functions/descriptive_statistics.py'),
                                                          'python_functions.descriptive_statistics.stats_2groups': ( 'descriptive_statistics.html#stats_2groups',
-                                                                                                                    'python_functions/descriptive_statistics.py')}}}
+                                                                                                                    'python_functions/descriptive_statistics.py')},
+            'python_functions.surface_contextualization': { 'python_functions.surface_contextualization.plot_surface': ( 'surface_contextualization.html#plot_surface',
+                                                                                                                         'python_functions/surface_contextualization.py')}}}
