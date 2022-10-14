@@ -73,6 +73,7 @@ def plot_scatter(
     loc_annot:str="upper right", # location of the annotation
     frameon_annot:bool=False, # whether to show the frame of the annotation
     pad_annot:float=None, # padding of the annotation
+    fig_size:tuple=(6,3), # figure size
     ):
 
     import seaborn as sns
@@ -80,7 +81,7 @@ def plot_scatter(
     import matplotlib.pyplot as plt
     from matplotlib.offsetbox import AnchoredText
     
-    fig, axs = plt.subplots(1, 1, figsize=(6, 3))
+    fig, axs = plt.subplots(1, 1, figsize=fig_size)
 
     axs.scatter(array1, array2, c=array1,
         
