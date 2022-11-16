@@ -15,6 +15,7 @@ def plot_scatter(
     frameon_annot:bool=False, # whether to show the frame of the annotation
     pad_annot:float=None, # padding of the annotation
     tick_formatting:tuple=None, # formatting strings for xaxis and yaxis; e.g. ("%.2f","%.2f") 
+    fig_size:tuple=(6,3), # figure size
     ):
 
     import seaborn as sns
@@ -23,7 +24,7 @@ def plot_scatter(
     from matplotlib.offsetbox import AnchoredText
     from matplotlib.ticker import FormatStrFormatter
     
-    fig, axs = plt.subplots(1, 1, figsize=(6, 3))
+    fig, axs = plt.subplots(1, 1, figsize=fig_size)
 
     axs.scatter(array1, array2, c=array1,
         
