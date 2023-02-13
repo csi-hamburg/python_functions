@@ -54,9 +54,6 @@ def stats_1group(
     return target_df
 
 # %% ../00_descriptive_statistics.ipynb 4
-import statistics
-
-
 def finalize_stats_1group(
     stats, # dataframe output by stats_2groups
     statistic="mean_std", # statistic to display ("mean_std","median_iqr")
@@ -156,15 +153,11 @@ def stats_2groups(df,columns,stats,group_col,covar=None):
 
             n_contr_2 = data_controls[data_controls[col] == values[1]].shape[0]
 
-            target_df.loc["contr_count",col] = n_contr_1 + n_contr_2
-
             target_df.loc[f"contr_percent",col]= n_contr_1 / (n_contr_1 + n_contr_2)
 
             n_pat_1 = data_patients[data_patients[col] == values[0]].shape[0]
 
             n_pat_2 = data_patients[data_patients[col] == values[1]].shape[0]
-
-            target_df.loc["pat_count",col] = n_pat_1 + n_pat_2
 
             target_df.loc[f"pat_percent",col]= n_pat_1 / (n_pat_1 + n_pat_2)
 
@@ -248,12 +241,11 @@ def stats_2groups(df,columns,stats,group_col,covar=None):
     return target_df
 
 # %% ../00_descriptive_statistics.ipynb 6
-def finalize_stats_2groups(
-    stats # dataframe output by stats_2groups
-    ):
-    "Takes dataframe and extracts relevant indices for descriptive statistics table"
+def finalize_stats_2groups(stats):
+
+    # Takes dataframe and extracts relevant indices for descriptive statistics table
     
-    
+    # stats: dataframe output by stats_2groups
 
     import pandas as pd
 
@@ -300,5 +292,10 @@ def finalize_stats_2groups(
             pretty_df.loc[stats_column, "pFDR"] = f"{stats.loc['p_fdr',stats_column]:.3f}*"
         else:
             pretty_df.loc[stats_column, "pFDR"] = f"{stats.loc['p_fdr',stats_column]:.3f}"
+
+
+        
+
+
 
     return pretty_df
