@@ -16,7 +16,7 @@ def stats_2groups(df,columns,stats,group_col,covar=None):
 
 # covar: covariates for ancova
 
-
+    import pandas as pd
 
     from scipy.stats import ttest_ind,chi2_contingency,mannwhitneyu
 
@@ -158,6 +158,8 @@ def finalize_stats_2groups(stats):
     # Takes dataframe and extracts relevant indices for descriptive statistics table
     
     # stats: dataframe output by stats_2groups
+
+    import pandas as pd
 
     columns = [r"Metricᵃ", "Patients", "Controls", r"p", r"pFDR", "Statᵇ"]
 
