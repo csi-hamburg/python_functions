@@ -33,7 +33,7 @@ def stats_1group(
 
             n_2 = df[df[col] == values[1]].shape[0]
 
-            target_df.loc[f"percent",col]= round(n_1 / (n_1 + n_2), 2)
+            target_df.loc[f"percent",col]= round(n_1 / (n_1 + n_2), 4)
 
         else:
 
@@ -242,8 +242,6 @@ def stats_2groups(df,columns,stats,group_col,covar=None):
 
 # %% ../00_descriptive_statistics.ipynb 6
 def finalize_stats_2groups(stats):
-
-    # Takes dataframe and extracts relevant indices for descriptive statistics table
     
     # stats: dataframe output by stats_2groups
 
