@@ -15,6 +15,9 @@ def extract_roi_information(
     
     Returns:
     - array: An array with aggregated ROI values
+
+    Use the function as:
+    result = extract_roi_information(image_path, atlas_path, atlas_labels)
     """
 
     import numpy as np
@@ -41,7 +44,6 @@ def extract_roi_information(
 
     return values
 
-# Use the function as:
-# result = extract_roi_information(image_path, atlas_path, atlas_labels)
+
 
 
