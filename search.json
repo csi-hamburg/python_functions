@@ -1,0 +1,72 @@
+[
+  {
+    "objectID": "surface_contextualization.html",
+    "href": "surface_contextualization.html",
+    "title": "Surface contextualization",
+    "section": "",
+    "text": "source\n\nplot_surface\n\n plot_surface (surface:str, values, label_text:str,\n               color_range:tuple=None, cmap='Blues')\n\nPlots metric values on surface\n\n\n\n\n\n\n\n\n\n\nType\nDefault\nDetails\n\n\n\n\nsurface\nstr\n\nSurface to plot on (default: fslr32k). Valid choices are “fslr32k”, “fsaverage”, “fsaverage3”, “fsaverage4”, “fsaverage5”, “fsaverage6”, “civet41k”, “civet164k”.\n\n\nvalues\n\n\nnumpy array of values to plot (has to match the number of vertices in the surface)\n\n\nlabel_text\nstr\n\ntext to label the plot\n\n\ncolor_range\ntuple\nNone\ncolor range to use\n\n\ncmap\nstr\nBlues\ncolor map to use\n\n\nReturns\nobject\n\nPlot\n\n\n\n\nsource\n\n\nsurface_to_schaefer\n\n surface_to_schaefer (array, surface:str, atlas_resolution:str)\n\nHarnesses neuromaps to schaefer-parcellate metrics on surface\n\n\n\n\nType\nDetails\n\n\n\n\narray\n\narray with surface values, has to match vertex count\n\n\nsurface\nstr\nsurface to parcellate; valid choices: (‘fslr32k’)\n\n\natlas_resolution\nstr\natlas resolution; valid choices: (‘400x7’)\n\n\n\n\nsource\n\n\nperform_spins\n\n perform_spins (array, reference_array, atlas_resolution:str)\n\nPerform spin permutations on Schaefer-parcellated data; returns spearman correlation, p-value and permuted correlations\n\n\n\n\n\n\n\n\n\nType\nDetails\n\n\n\n\narray\n\narray with Schaefer-parcellated metric\n\n\nreference_array\n\nreference array with Schaefer-parcellated metric\n\n\natlas_resolution\nstr\natlas resolution; valid choices: (“100”,“200”,‘400’)\n\n\n\n\nsource\n\n\nplot_null_distributions\n\n plot_null_distributions (r:float, p:float, d, xlabel:str, color:str)\n\nPlots null distribution of correlations\n\n\n\n\n\n\n\n\n\nType\nDetails\n\n\n\n\nr\nfloat\ncorrelation between metric and reference\n\n\np\nfloat\np-value\n\n\nd\n\narray with permuted correlations\n\n\nxlabel\nstr\nx axis label\n\n\ncolor\nstr\ncolor to use for the plot (hex code, rgb, or named color)\n\n\n\n\nsource\n\n\nweighted_degree_centrality\n\n weighted_degree_centrality (mat, rank:bool=False)\n\nCompute weighted degree centrality measures from the connectivity data\n\n\n\n\n\n\n\n\n\n\nType\nDefault\nDetails\n\n\n\n\nmat\n\n\nadjacency matrix\n\n\nrank\nbool\nFalse\nwhether to return the rank of the centrality measure\n\n\n\n\nsource\n\n\nyeo_participation_coefficient\n\n yeo_participation_coefficient (mat_df, rank:bool=False)\n\nComputes participation coefficient of node with regard to Yeo networks\n\n\n\n\n\n\n\n\n\n\nType\nDefault\nDetails\n\n\n\n\nmat_df\n\n\nadjacency matrix as pandas dataframe with row and column index corresponding with Schaefer-parcellated region labels\n\n\nrank\nbool\nFalse\nwhether to return the rank of participation coefficient\n\n\n\n\nsource\n\n\nneighborhood_abnormality\n\n neighborhood_abnormality (adjacency, metric, atlas_labels)\n\nComputes neighborhood abnormality index\n\n\n\n\nDetails\n\n\n\n\nadjacency\nadjacency matrix\n\n\nmetric\nnodewise metric matching node count of adjacency matrix\n\n\natlas_labels\natlas labels\n\n\n\n\nsource\n\n\nconnectivity_gradients\n\n connectivity_gradients (mat, gradient_nr, atlas_resolution:str)\n\n\n\n\n\n\n\n\n\n\nType\nDetails\n\n\n\n\nmat\n\nschaefer adjacency matrix\n\n\ngradient_nr\n\ngradient number to return\n\n\natlas_resolution\nstr\natlas resolution; valid choices: (“100”,“200”,‘400’)",
+    "crumbs": [
+      "Surface contextualization"
+    ]
+  },
+  {
+    "objectID": "plotting.html",
+    "href": "plotting.html",
+    "title": "Plotting",
+    "section": "",
+    "text": "source\n\nplot_scatter\n\n plot_scatter (array1, measure_name1:str, array2, measure_name2:str,\n               annotation_dict:dict, cmap:str=None, loc_annot:str='upper\n               right', frameon_annot:bool=False, pad_annot:float=None,\n               tick_formatting:tuple=None, fig_size:tuple=(6, 3))\n\n\n\n\n\n\n\n\n\n\n\nType\nDefault\nDetails\n\n\n\n\narray1\n\n\narray with values to plot on the x-axis\n\n\nmeasure_name1\nstr\n\nname of the measure to plot on the x-axis\n\n\narray2\n\n\narray with values to plot on the y-axis\n\n\nmeasure_name2\nstr\n\nname of the measure to plot on the y-axis\n\n\nannotation_dict\ndict\n\ndictionary with annotations to plot\n\n\ncmap\nstr\nNone\ncolor map to use\n\n\nloc_annot\nstr\nupper right\nlocation of the annotation\n\n\nframeon_annot\nbool\nFalse\nwhether to show the frame of the annotation\n\n\npad_annot\nfloat\nNone\npadding of the annotation\n\n\ntick_formatting\ntuple\nNone\nformatting strings for xaxis and yaxis; e.g. (“%.2f”,“%.2f”)\n\n\nfig_size\ntuple\n(6, 3)\nfigure size",
+    "crumbs": [
+      "Plotting"
+    ]
+  },
+  {
+    "objectID": "descriptive_statistics.html",
+    "href": "descriptive_statistics.html",
+    "title": "Descriptive statistics",
+    "section": "",
+    "text": "source\n\nstats_1group\n\n stats_1group (df, columns)\n\n\n\n\n\n\n\n\n\nDetails\n\n\n\n\ndf\ndf: dataframe with statistics; make sure that categorical columns are of type “object”\n\n\ncolumns\n# columns: columns to describe\n\n\n\n\nsource\n\n\nfinalize_stats_1group\n\n finalize_stats_1group (stats, statistic='mean_std')\n\nTakes dataframe and extracts relevant indices for descriptive statistics table\n\n\n\n\n\n\n\n\n\n\nType\nDefault\nDetails\n\n\n\n\nstats\n\n\ndataframe output by stats_2groups\n\n\nstatistic\nstr\nmean_std\nstatistic to display (“mean_std”,“median_iqr”)\n\n\n\n\nsource\n\n\nstats_2groups\n\n stats_2groups (df, columns, stats, group_col, covar=None)\n\n\nsource\n\n\nfinalize_stats_2groups\n\n finalize_stats_2groups (stats)",
+    "crumbs": [
+      "Descriptive statistics"
+    ]
+  },
+  {
+    "objectID": "feature_extraction.html",
+    "href": "feature_extraction.html",
+    "title": "Plotting",
+    "section": "",
+    "text": "source\n\nextract_roi_information\n\n extract_roi_information (image_path, atlas_path, atlas_labels,\n                          aggregation='mean')\n\n*Extracts ROI information from a given image using a specified atlas.\nReturns: - array: An array with aggregated ROI values\nUse the function as: result = extract_roi_information(image_path, atlas_path, atlas_labels)*\n\n\n\n\n\n\n\n\n\n\nType\nDefault\nDetails\n\n\n\n\nimage_path\n\n\nPath to the 3D image\n\n\natlas_path\n\n\nPath to the 4D atlas\n\n\natlas_labels\n\n\nList of labels\n\n\naggregation\nstr\nmean\nMethod of aggregation (“mean”, “sum”, or “load”)",
+    "crumbs": [
+      "Plotting"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "python_functions",
+    "section": "",
+    "text": "This file will become your README and also the index of your documentation.",
+    "crumbs": [
+      "python_functions"
+    ]
+  },
+  {
+    "objectID": "index.html#install",
+    "href": "index.html#install",
+    "title": "python_functions",
+    "section": "Install",
+    "text": "Install\ngit clone https://github.com/csi-hamburg/python_functions\ncd python_functions\npython setup.py install",
+    "crumbs": [
+      "python_functions"
+    ]
+  },
+  {
+    "objectID": "index.html#how-to-use",
+    "href": "index.html#how-to-use",
+    "title": "python_functions",
+    "section": "How to use",
+    "text": "How to use\nstats = stats_2groups(statistics_df,list(variables), ([“ttest”] * 12 + [“ancova”] * 8), ‘diagnosis_metabolic_syndrome’, [‘base_age’, ‘base_sex_numeric’, ‘base_education_isced’])\nstats_prettified = finalize_stats_2groups(stats)",
+    "crumbs": [
+      "python_functions"
+    ]
+  }
+]
