@@ -41,15 +41,15 @@ def stats_1group(
 
             target_df.loc["count",col]=df_describe[col]["count"]
 
-            target_df.loc["mean",col]=round(df_describe[col]["mean"], 2)
+            target_df.loc["mean",col]=round(df_describe[col]["mean"], 4)
 
-            target_df.loc["std",col]=round(df_describe[col]["std"], 2)
+            target_df.loc["std",col]=round(df_describe[col]["std"], 4)
 
-            target_df.loc["median",col]=round(df_describe[col]["50%"], 2)
+            target_df.loc["median",col]=round(df_describe[col]["50%"], 4)
 
-            target_df.loc["IQR25",col]=round(df_describe[col]["25%"], 2)
+            target_df.loc["IQR25",col]=round(df_describe[col]["25%"], 4)
 
-            target_df.loc["IQR75",col]=round(df_describe[col]["75%"], 2)
+            target_df.loc["IQR75",col]=round(df_describe[col]["75%"], 4)
 
     return target_df
 
